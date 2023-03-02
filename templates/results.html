@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF=8">
+    <title>Result Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
+
+
+</head>
+
+<body>
+    <div class="table-users mt-5 ">
+        <div class="header">{{crop_name}}</div>
+
+        <table cellspacing="1">
+            <tr>
+                <th>Day</th>
+                <th>Price</th>
+            </tr>
+            {% for price in prices %}
+            <tr>
+                <td>{{price['day']}}</td>
+                <td>{{price['price']}}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+</body>
+
+</html>
