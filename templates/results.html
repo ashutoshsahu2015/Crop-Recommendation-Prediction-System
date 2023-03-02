@@ -8,31 +8,35 @@
     <title>Result Page</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
 
 
 </head>
 
 <body>
-    <div class="table-users mt-5 ">
-        <div class="header">{{crop_name}}</div>
+    <div class="result ">
+       <h1 class="header">
+            Recommended Crop : {{crop_name}}
+       </h1>   
+       
+       <table cellspacing="1">
+           <tr>
+               <th>Day</th>
+               <th>Price</th>
+           </tr>
+           {% for price in prices %} 
+           <tr>
+               <td>{{price['day']}}</td>
+               <td>{{price['price']}}</td> 
 
-        <table cellspacing="1">
-            <tr>
-                <th>Day</th>
-                <th>Price</th>
-            </tr>
-            {% for price in prices %}
-            <tr>
-                <td>{{price['day']}}</td>
-                <td>{{price['price']}}</td>
+           </tr>
+           {% endfor %}
+       </table>
+        <footer>
+        <h3 class="footer-text">Made with ❤️ by Ashutosh  </h3>
+        </footer>
 
-            </tr>
-            {% endfor %}
-        </table>
-
-    </div>
-
+   </div> 
 </body>
 
 </html>

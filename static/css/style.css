@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #1a1a1a;
+    color: aliceblue;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.main, .result{
+    padding: auto;
+    margin-top: 30px;
+}
+
+.main h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formCard{
+   width:50%;
+   height: auto;
+   margin: 0 auto;
+   background-color: #3f3f3f;
+   border-radius: 10px;
+   padding: 40px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.formCard label{
+    font-size: 20px;
+    
+}
+
+.formCard input {
+    width: 100%;
+    height:30px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.formField{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    
+}
+
+.formField select{
+   height: 30px;
+   font-size: 15px;
+   border-radius: 5px;
+   border: none;
+   margin-right: 10px;
+   margin-left: 5px;
+    
+}
+
+/* submit button */
+.btn {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+   
+}
+
+.formCard .btn{
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+footer{
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* for result page */
+.header{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+table, th, td{
+    border: 2px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+    color: #000000;
+}
+
+table tr:nth-child(odd){
+    background-color: #484747;
+    color: #f2f2f2;
+}
+
+table th{
+    background-color: #4CAF50;
+    color: #f2f2f2;
+}
+
+
+
+
+
+

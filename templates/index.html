@@ -3,95 +3,95 @@
 {% block head %}
 
 <title>Homepage</title>
-<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
 {% endblock %}
 
     
 {% block body %}
 
-<div class="text-center mt-5">
-    <h1 class="text-dark  fst-italic  heading"> Crop Recommendation and Prediction System </h1>
+<div class="main">
+    <h1>Crop Recommendation and Prediction System</h1>
+    <div class="formCard">
+      <form action="/" method="POST">
+        
+        <label for="nitrogen">Nitrogen Ratio in Soil : </label>
+        <input type="text" placeholder="Nitrogen Ratio" name="nitrogen" id="nitrogen" />
+        
+        <label for="phosphorous">Phosphorous Ratio in Soil:</label>
+        <input type="text" placeholder="Phosphorous Ratio"name="phosphorous"id="phosphorous" />
+        
+        <label for="potassium"> Potassium Ratio in Soil:</label>
+        <input type="text" placeholder="Potassium Ratio" name="potassium" id="potassium"/>
 
-    <div class="form">
-        <form action="/" method="POST">
-            
-            <label for="nitrogen">Nitrogen Ratio in Soil : </label>
-            <input type="text" placeholder="Nitrogen Ratio" name="nitrogen" id="nitrogen" class="w-20 me-3 p-2">
+        <label for="temperature">Temperature in Degree: </label>
+        <input type="text" placeholder="Temperature in Degree"name="temperature" id="temperature"/>
 
-            <label for="phosphorous">Phosphorous Ratio in Soil:</label>
-            <input type="text" placeholder="Phosphorous Ratio" name="phosphorous" id="phosphorous" class="w-20 me-3 p-2">
+        <label for="humidity">Relative Humidity in Percentage: </label>
+        <input type="text" placeholder="Humidity in Percentage" name="humidity" id="humidity"/>
 
-            <label for="potassium"> Potassium Ratio in Soil:</label>
-            <input type="text" placeholder="Potassium Ratio" name="potassium" id="potassium" class="w-20 me-3 p-2"><br><br><br>
+        <label for="ph">PH value of the soil: </label>
+        <input type="text" placeholder="PH value" name="ph" id="ph"/>
 
-            <label for="temperature">Temperature in Degree: </label>
-            <input type="text" placeholder="Temperature in Degree" name="temperature" id="temperature" class="w-20 me-3 p-2">
+        <label for="rainfall">Rainfaill expected in mm:</label>
+        <input type="text" placeholder="Expected Rainfaill in mm" name="rainfall" id="rainfall" />
 
-            <label for="humidity">Relative Humidity in Percentage: </label>
-            <input type="text" placeholder="Humidity in Percentage" name="humidity" id="humidity" class="w-20 me-3 p-2">
-            
-            <label for="ph">PH value of the soil: </label>
-            <input type="text" placeholder="PH value" name="ph" id="ph" class="w-20 me-3 p-2"><br><br><br>
-            
-            <label for="rainfall">Rainfaill expected in mm:</label>
-            <input type="text" placeholder="Expected Rainfaill in mm" name="rainfall" id="rainfall" class="w-20 me-3 p-2">
+        <div class="formField">
+          <label for="state">State : </label>
+          <select name="state" id="state" class="w-20 me-3 p-2">
+          <option value="" disabled selected>Select the State</option>    
+          <option value="Chattisgarh">Chattisgarh</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="NCT of Delhi">NCT of Delhi</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option> 
+          <option value="Uttrakhand">Uttrakhand</option>
+          <option value="West Bengal">West Bengal</option>
+          <option value="Assam">Assam</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Manipur">Manipur</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+          <option value="Meghalaya">Meghalaya</option>
+          <option value="Nagaland">Nagaland</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Telangana">Telangana</option>      
+          <option value="Andhra Pradesh">Andhra Pradesh</option>      
+          <option value="Tripura">Tripura</option>      
+          <option value="Jharkhand">Jharkhand</option>      
+          <option value="Pondicherry">Pondicherry</option>    
+          <option value="Mizoram">Mizoram</option>    
+          <option value="Goa">Goa</option>    
+          </select>
 
-            <label for="state">State : </label>
-            <select name="state" id="state" class="w-20 me-3 p-2">
-            <option value="" disabled selected>Select the State</option>    
-            <option value="Chattisgarh">Chattisgarh</option>
-            <option value="Haryana">Haryana</option>
-            <option value="Himachal Pradesh">Himachal Pradesh</option>
-            <option value="Kerala">Kerala</option>
-            <option value="Madhya Pradesh">Madhya Pradesh</option>
-            <option value="Maharashtra">Maharashtra</option>
-            <option value="NCT of Delhi">NCT of Delhi</option>
-            <option value="Punjab">Punjab</option>
-            <option value="Rajasthan">Rajasthan</option>
-            <option value="Uttar Pradesh">Uttar Pradesh</option> 
-            <option value="Uttrakhand">Uttrakhand</option>
-            <option value="West Bengal">West Bengal</option>
-            <option value="Assam">Assam</option>
-            <option value="Karnataka">Karnataka</option>
-            <option value="Manipur">Manipur</option>
-            <option value="Gujarat">Gujarat</option>
-            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-            <option value="Meghalaya">Meghalaya</option>
-            <option value="Nagaland">Nagaland</option>
-            <option value="Odisha">Odisha</option>
-            <option value="Tamil Nadu">Tamil Nadu</option>
-            <option value="Telangana">Telangana</option>      
-            <option value="Andhra Pradesh">Andhra Pradesh</option>      
-            <option value="Tripura">Tripura</option>      
-            <option value="Jharkhand">Jharkhand</option>      
-            <option value="Pondicherry">Pondicherry</option>    
-            <option value="Mizoram">Mizoram</option>    
-            <option value="Goa">Goa</option>    
-            </select>
+          <label for="">Month of Harvesting: </label>
+          <select name="month" id="month" class="w-20 me-3 p-2">
+              <option value="" selected disabled>Select Harvesting month</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+          </select>
 
-            <label for="">Month of Harvesting: </label>
-            <select name="month" id="month" class="w-20 me-3 p-2">
-                <option value="" selected disabled>Select Harvesting month</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-            </select><br><br><br>
+        </div>
+          <input type="submit" value="Predict" class="btn">
 
-            <input type="submit" value="Predict" class="btn btn-outline-dark btn-lg px-5 textlight">
-        </form>
-
+      </form>
     </div>
-    
-</div>
-<footer >
-    <h3 class="footer-text">Made with ❤️ by Ashutosh  </h3>
-</footer>
+    <footer >
+      <h3 class="footer-text">Made with ❤️ by Ashutosh  </h3>
+  </footer> 
+  </div>
 
 {% endblock %}
